@@ -1,0 +1,276 @@
+:root {
+
+    --clr-orange: 25, 97%, 53%;
+    --clr-white: 0, 0%, 100%;
+    --clr-light-grey: 217, 12%, 63%;
+    --clr-medium-grey: 216, 12%, 54%;
+    --clr-dark-blue: 213, 19%, 18%;
+    --clr-very-dark-blue: 216, 12%, 8%;
+
+    --font-family-overpass: 'Overpass', sans-serif;
+}
+
+*,
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ 
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+  max-width: 1440px;
+  padding: 195px 0px 189px 0px;
+  background-color: hsl(var(--clr-very-dark-blue));
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+    width: 327px;
+    height: 360px;
+    margin: auto;
+    border-radius: 30px;
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+
+    @media screen and (min-width: 1200px) {
+        width: 412px;
+        height: 416px;  
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 35px;
+        padding: 30px;
+
+        .title {
+            color: hsl(var(--clr-white));
+            font-family: var(--font-family-overpass);
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+            @media screen and (min-width: 1200px) {
+                font-size: 28px;
+            }
+        }
+        
+        .description {
+            width: 279px;
+
+            color: hsl(var(--clr-light-grey));
+            font-family: var(--font-family-overpass);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+
+            @media screen and (min-width: 1200px) {
+                font-size: 15px;
+                width: 340px;
+            }
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            input {
+                width: 42px;
+                height: 42px;
+                
+                background-color: hsl(var(--clr-dark-blue));
+                color: hsl(var(--clr-white));
+
+                border: none;
+                outline: none;
+                border-radius: 50%;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: hsl(var(--clr-light-grey));
+                }
+
+                &:active {
+                    background-color: hsl(var(--clr-orange));
+                }
+
+                @media screen and (min-width: 1200px) {
+                    width: 51px;
+                    height: 51px;
+                }
+            }
+        }
+
+        .submitBtn {
+            width: 279px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: hsl(var(--clr-orange));
+            border-radius: 22.5px;
+
+            color: hsl(var(--clr-white));
+            font-family: var(--font-family-overpass);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1.867px;
+            cursor: pointer;
+
+
+            @media screen and (min-width: 1200px) {
+                width: 341px;
+                height: 45px;
+                font-size: 15px;
+                
+            }
+            
+            &:hover,
+            &:active {
+                background-color: hsl(var(--clr-white));
+                color: hsl(var(--clr-orange));
+            }
+        }
+        
+    }
+}
+
+.popup {
+    width: 327px;
+    height: 360px;
+    
+    border-radius: 15px;
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+    @media screen and (min-width: 1200px) {
+        width: 412px;
+        height: 416px;
+
+        border-radius: 30px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 33px;
+
+        .popup-img {
+            width: 144px;
+            height: 96px;
+
+            @media screen and (min-width: 1200px) {
+                width: 162px;
+                height: 108px;
+            }
+        }
+        .rateSelected {
+            width: 193px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 22.5px;
+            background:hsl(var(--clr-dark-blue));
+
+            color: hsl(var(--clr-orange));
+            text-align: center;
+            font-family: var(--font-family-overpass);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+    
+            @media screen and (min-width: 1200px) {
+                font-size: 15px;
+                line-height: 24px;
+            }
+
+            span {
+                margin: 0 5px;
+            }
+        }
+        
+        p {
+            color: hsl(var(--clr-white));
+            text-align: center;
+            font-family: var(--font-family-overpass);
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+            @media screen and (min-width: 1200px) {
+                font-size: 28px;
+            }
+        }
+        .description {
+            color: hsl(var(--clr-light-grey));
+            width: 279px;
+
+            font-family: Overpass;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; 
+
+            @media screen and (min-width: 1200px) {
+                width: 340px;
+                font-size: 15px;
+            }
+        }
+    }
+}

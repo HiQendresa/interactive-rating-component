@@ -5,45 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./style.css">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
   </style>
 </head>
 <body>
-
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="star-icon">
+        <img src="./images/icon-star.svg" alt="star icon">
+      </div>
+      <div class="title"> How did we do?</div>
+      <div class="description">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</div>
+      <div class="rating">
+        <input type="button" value="1">
+        <input type="button" value="2">
+        <input type="button" value="3">
+        <input type="button" value="4">
+        <input type="button" value="5">
+      </div>
+      <div class="submitBtn">Submit</div>
+    </div>
+  </div>
+</main>
 
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<div class="popup">
+  <div class="content">
+    <div class="popup-img">
+      <img src="./images/illustration-thank-you.svg" alt="illustration-thank-you">
+    </div>
+    <div class="rateSelected">You selected <span> 4 </span> out of 5</div>
+    <p>Thank you!</p>
+    <div class="description"> We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</div>
   </div>
+</div>
+
+  
+  <script src="./script.js"></script>
 </body>
 </html>
