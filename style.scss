@@ -81,10 +81,6 @@ select {
         gap: 22px;
         padding: 30px;
 
-        @media screen and (min-width: 1200px) {
-            gap: 35px;
-        }
-
         .title {
             color: hsl(var(--clr-white));
             font-family: var(--font-family-overpass);
@@ -132,13 +128,26 @@ select {
                 border-radius: 50%;
                 cursor: pointer;
 
+                color: hsl(var(--clr-medium-grey));
+                text-align: center;
+
+                /* Rating */
+                font-family: var(--font-family-overpass);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+
                 &:hover {
                     background-color: hsl(var(--clr-light-grey));
+                    color: hsl(var(--clr-white));
                 }
-
+                
                 &:active,
                 &:focus {
                     background-color: hsl(var(--clr-orange));
+                    color: hsl(var(--clr-white));
                 }
 
                 @media screen and (min-width: 1200px) {
@@ -172,6 +181,7 @@ select {
                 width: 341px;
                 height: 45px;
                 font-size: 15px;
+                margin-top: 15px;
                 
             }
             

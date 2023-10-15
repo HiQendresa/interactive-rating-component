@@ -81,11 +81,6 @@ select {
   gap: 22px;
   padding: 30px;
 }
-@media screen and (min-width: 1200px) {
-  .container .content {
-    gap: 35px;
-  }
-}
 .container .content .title {
   color: hsl(var(--clr-white));
   font-family: var(--font-family-overpass);
@@ -129,12 +124,23 @@ select {
   outline: none;
   border-radius: 50%;
   cursor: pointer;
+  color: hsl(var(--clr-medium-grey));
+  text-align: center;
+  /* Rating */
+  font-family: var(--font-family-overpass);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
 }
 .container .content .rating input:hover {
   background-color: hsl(var(--clr-light-grey));
+  color: hsl(var(--clr-white));
 }
 .container .content .rating input:active, .container .content .rating input:focus {
   background-color: hsl(var(--clr-orange));
+  color: hsl(var(--clr-white));
 }
 @media screen and (min-width: 1200px) {
   .container .content .rating input {
@@ -164,6 +170,7 @@ select {
     width: 341px;
     height: 45px;
     font-size: 15px;
+    margin-top: 15px;
   }
 }
 .container .content .submitBtn:hover, .container .content .submitBtn:active {
