@@ -78,8 +78,13 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 35px;
+  gap: 22px;
   padding: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .container .content {
+    gap: 35px;
+  }
 }
 .container .content .title {
   color: hsl(var(--clr-white));
@@ -128,7 +133,7 @@ select {
 .container .content .rating input:hover {
   background-color: hsl(var(--clr-light-grey));
 }
-.container .content .rating input:active {
+.container .content .rating input:active, .container .content .rating input:focus {
   background-color: hsl(var(--clr-orange));
 }
 @media screen and (min-width: 1200px) {
@@ -189,7 +194,7 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 33px;
+  gap: 20px;
 }
 .popup .content .popup-img {
   width: 144px;
@@ -243,7 +248,8 @@ select {
 .popup .content .description {
   color: hsl(var(--clr-light-grey));
   width: 279px;
-  font-family: Overpass;
+  text-align: center;
+  font-family: var(--font-family-overpass);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
