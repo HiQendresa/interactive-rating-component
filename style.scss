@@ -9,7 +9,6 @@
 
     --font-family-overpass: 'Overpass', sans-serif;
 }
-
 *,
 *::before, 
 *::after {
@@ -110,13 +109,19 @@ select {
             }
         }
 
-        .rating {
+        form {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 15px;
 
-            input {
+            div {
+
+                display: flex;
+                gap: 15px;
+                
+                input  {
                 width: 42px;
                 height: 42px;
                 
@@ -155,6 +160,8 @@ select {
                     height: 51px;
                 }
             }
+            }
+            
         }
 
         .submitBtn {
@@ -166,6 +173,8 @@ select {
 
             background-color: hsl(var(--clr-orange));
             border-radius: 22.5px;
+            border:none;
+            outline: none;
 
             color: hsl(var(--clr-white));
             font-family: var(--font-family-overpass);
@@ -231,6 +240,7 @@ select {
                 height: 108px;
             }
         }
+
         .rateSelected {
             width: 193px;
             height: 32px;
@@ -259,7 +269,7 @@ select {
             }
         }
         
-        p {
+        h2 {
             color: hsl(var(--clr-white));
             text-align: center;
             font-family: var(--font-family-overpass);
@@ -272,6 +282,7 @@ select {
                 font-size: 28px;
             }
         }
+        
         .description {
             color: hsl(var(--clr-light-grey));
             width: 279px;
